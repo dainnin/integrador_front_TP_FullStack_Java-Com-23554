@@ -52,6 +52,10 @@ document.getElementById('oradores').appendChild(articulo)
    
     //Creacion del banner
     const elemBanner=document.createElement('div')
+      document.getElementsByTagName('nav')[0].style.backgroundImage=`url(${obJSON.banner["ba1.jpg"]})`
+    document.getElementsByTagName('nav')[0].style.backgroundSize='100%'
+    document.getElementsByTagName('nav')[0].style.backgroundRepeat='no-repeat'
+    
 elemBanner.innerHTML=`
 <h1>Conf Bs As</h1>
 <p><strong>Bs As llega por primera vez a Argentina. Un evento para compartir con nuestra comunidad el

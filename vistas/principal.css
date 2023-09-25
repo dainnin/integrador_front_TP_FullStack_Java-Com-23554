@@ -25,7 +25,7 @@ h4{
 
 }
     body {
-        /*background-image: url("../tp.jpeg") !important;*/
+        background-image: url("../tp.jpeg") !important;
         background-size:100%;
             margin: 0;
         }
@@ -62,13 +62,14 @@ h4{
              
             display: flex !important;
            justify-content:right;
+           align-items: center;
             text-align:end ;
             color: bisque ;
             height: calc(85vw / 16 * 9 - (55px + 2vw));
             & div
             {
                 
-                margin: 10vw;
+                margin-right: 10vw;
                 width: 45%;
 
             };
@@ -105,6 +106,7 @@ h4{
         width: var(--CardWidth);
         min-width: auto !important;
     }
+    margin-bottom: 5vw;
  }
  #descript{
     & span{

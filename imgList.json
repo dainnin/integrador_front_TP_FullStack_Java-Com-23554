@@ -1,0 +1,25 @@
+{
+    "oradores":{
+        "ada.jpeg":["https://dainnin.github.io/HTMLPubM/imgIntegrador/ada.jpeg",
+        "Ada Lovelace",
+    "Aunque no hay registros específicos de Ada Lovelace como oradora pública, se sabe que era una comunicadora efectiva. Su trabajo en la máquina analítica de Charles Babbage demostró su habilidad para entender y explicar conceptos complejos7. Además, sus habilidades lingüísticas y creativas fueron fundamentales en su invención de la programación informática"
+],
+        "steve.jpg":["https://dainnin.github.io/HTMLPubM/imgIntegrador/steve.jpg",
+        "Steve Jobs",
+        "Steve Jobs es ampliamente reconocido como uno de los oradores públicos más efectivos de su tiempo4. Era famoso por su atención rigurosa a cada detalle en sus presentaciones, desde el estilo de las fuentes en sus diapositivas hasta el color del fondo del escenario5. Su habilidad para contar historias apasionantes y hacer demostraciones memorables le permitió presentar ideas complejas de manera clara y sencilla"
+    ],
+        "bill.jpg":["https://dainnin.github.io/HTMLPubM/imgIntegrador/bill.jpg",
+        "Bill Gates",
+        "Bill Gates es conocido por su capacidad para hablar sobre desafíos globales de manera comprensible y memorable1. Ha participado en numerosas charlas y entrevistas, abordando temas como la salud global, la evasión fiscal corporativa, la guerra de robots, la filantropía y las redes sociales2. Su estilo de presentación es detallado y bien preparado, lo que refleja su enfoque metódico y su pasión por los temas que discute."
+    ]
+    },
+    "banner":{
+    "ba1.jpg":"https://dainnin.github.io/HTMLPubM/imgIntegrador/ba1.jpg",
+    "ba2.jpg":"https://dainnin.github.io/HTMLPubM/imgIntegrador/ba2.jpg",
+    "ba3.jpg":"https://dainnin.github.io/HTMLPubM/imgIntegrador/ba3.jpg"
+    },
+    "logoNav":{"codoacodo.png":"https://dainnin.github.io/HTMLPubM/imgIntegrador/codoacodo.png"
+    },
+"descript":{"honolulu.jpg":"https://dainnin.github.io/HTMLPubM/imgIntegrador/honolulu.jpg"
+}
+}

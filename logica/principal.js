@@ -29,8 +29,9 @@ llamarObjeto().then((obJSON) => {
    <div class='card-body'>
     <h4 class='card-title'>${imgSrc[1]}</h4>
     <p class='card-text'>${imgSrc[2]}</p>
-    <a class='btn btn-primary' href="">Boton Bootstrap 5</a>
- </div> `
+    </div> 
+    <a class='btn btn-primary' href="">Mas Info</a>
+    `
 document.getElementById('oradores').appendChild(articulo)
    }//Fin de Card Oradores
 

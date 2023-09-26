@@ -1,6 +1,6 @@
     :root{
-        --CardFontSizeP: calc(7px + 1vw);
-        --CardFontSizeA: calc(5px  + 1.25vw);
+        --CardFontSizeP: calc(5px + 1vw);
+        --CardFontSizeA: calc(3px  + 1.25vw);
         --CardFontSizeB: calc(5px + 1.5vw);
         --CardFontSizeH4: calc(5px + 2vw);
         --CardWidth: calc(100vw * 30/132);
@@ -16,9 +16,12 @@ a{
 p{
     margin: 6px 0 6px 0;
     font-size: var(--CardFontSizeP) !important;
+    
+    overflow-y: scroll !important;
 }
 button{
     font-size: var(--CardFontSizeB) !important;
+ 
 }
 h4{
     font-size: var(--CardFontSizeH4) !important;
@@ -73,8 +76,8 @@ color: bisque;
                 border-radius: 2vw;
                padding: 1vw;
                 backdrop-filter: blur(1px) grayscale(60%);
-                margin-right: 10vw;
-                width: calc(45% + 125px - 7vw );
+                margin-right: calc(10px + 2vw);
+                width: calc(45% + 300px - 15vw );
 
             };
             & a{
@@ -83,10 +86,7 @@ color: bisque;
 
         }
       section{
-      & p{
-
-        font-size: calc(1px + 1vw) !important;
-      }
+     
         text-align: center;
       }
         #oradores{
@@ -101,8 +101,10 @@ color: bisque;
     align-items: center;
    
     border-width: 2px !important;
-    
+   
     & div{
+       
+        overflow: hidden;
         padding: 5px;
     }
     & img{
@@ -111,21 +113,36 @@ color: bisque;
         min-width: auto !important;
     }
     margin-bottom: 5vw;
+    & a{
+        margin: 1vw;
+    }
  }
  .card-body{
    display: flex;
    flex-direction: column;
+ & p{
+    height: calc(var(--CardWidth) * 8/11);
+ }
    
-   justify-content: space-between;
  }
  #descript{
+    color: antiquewhite !important;
+     display: inline-flex;
+
     & span{
+        
         width: 50vw;
         & img{width: 50vw;}
-    }
-   
+    };
+   & :nth-child(2){
+  height: calc(50vw * 9/16);
+  
+ 
+    padding: 1vw;
+   };
+
         background-color:  #343a40;
-   
+    
  }
  form{
     margin: calc(5px + 2vw);
@@ -163,25 +180,38 @@ color: bisque;
     0% { opacity: 0; }
     100% { opacity: 1; }
   }
+
+
+
+ @keyframes abrir {
+    0% { max-height: 50px; }
+    100% { max-height:125px; }
+  }
   
-  #prue{
+  .prue {
     background-color: rebeccapurple;
     width: 360px;
-    height: 100px;
-    position: relative;
-   & p {
-    
-    visibility: collapse;
-   }
-  }
-      
-  #prue:hover{
-  height: auto;
+    max-height: 50px;
+    overflow: hidden;
   & p{
-    visibility: visible;
-    animation-name: ejemplo;
+    visibility: collapse;
+  }
+  }
+  
+  .prue:hover{
+    
+    animation-name: abrir;
     animation-duration: 2s;
-    position: absolute;
-   height: 100%;
-    width: 100%;
-  }}
+    animation-fill-mode: forwards;
+    & p{
+      visibility: visible;
+      animation-name: ejemplo;
+      animation-duration: 2s;
+      
+   
+    };
+
+    
+      overflow-y: scroll;
+  }
+ 

@@ -30,7 +30,7 @@ llamarObjeto().then((obJSON) => {
     <h4 class='card-title'>${imgSrc[1]}</h4>
     <p class='card-text'>${imgSrc[2]}</p>
     </div> 
-    <a class='btn btn-primary' href="">Mas Info</a>
+    <a class='btn btn-primary' href="${imgSrc[3]}">Mas Info</a>
     `
 document.getElementById('oradores').appendChild(articulo)
    }//Fin de Card Oradores

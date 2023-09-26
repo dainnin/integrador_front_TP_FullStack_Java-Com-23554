@@ -8,6 +8,10 @@
     *{
        /*  background-color: transparent !important; */
         min-width: auto !important;
+      
+    }
+    ::-webkit-scrollbar{
+        width: 0px;
     }
 a{
     font-size: var(--CardFontSizeA) !important;
@@ -18,6 +22,8 @@ p{
     font-size: var(--CardFontSizeP) !important;
     
     overflow-y: scroll !important;
+    
+   
 }
 button{
     font-size: var(--CardFontSizeB) !important;
@@ -163,7 +169,7 @@ color: bisque;
             width: 55vw;
         }
         &  *  input{
-            margin: calc(5px + 2vw);
+            margin: calc(5px + 2vw) 0 calc(5px + 2vw) 0;
             width: 45%;
             color: red ;
             

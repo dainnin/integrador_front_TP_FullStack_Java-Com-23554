@@ -34,7 +34,7 @@ h4{
 
 }
     body {
-        background-image: url("../tp.jpeg") !important;
+      /*  background-image: url("../tp.jpeg") !important;*/
         background-size:100%;
             margin: 0;
         }

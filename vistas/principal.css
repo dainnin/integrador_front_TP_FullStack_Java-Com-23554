@@ -1,5 +1,5 @@
     :root{
-        --CardFontSizeP: calc(3px + 1vw);
+        --CardFontSizeP: calc(7px + 1vw);
         --CardFontSizeA: calc(5px  + 1.25vw);
         --CardFontSizeB: calc(5px + 1.5vw);
         --CardFontSizeH4: calc(5px + 2vw);
@@ -25,7 +25,7 @@ h4{
 
 }
     body {
-      /*  background-image: url("../tp.jpeg") !important;*/
+        background-image: url("../tp.jpeg") !important;
         background-size:100%;
             margin: 0;
         }
@@ -40,7 +40,7 @@ h4{
                 display: flex;
                 justify-content: center;
                 align-items: center;
-
+color: bisque;
                & img {
 
                     height: calc(50px * 12 / 13 + 1vw );
@@ -54,6 +54,7 @@ h4{
               & a{
                 padding-left: 1vw;
                } 
+
         }
         nav{
             height: calc(85vw / 16 * 9);
@@ -66,11 +67,14 @@ h4{
             text-align:end ;
             color: bisque ;
             height: calc(85vw / 16 * 9 - (55px + 2vw));
+        
             & div
             {
-                
+                border-radius: 2vw;
+               padding: 1vw;
+                backdrop-filter: blur(1px) grayscale(60%);
                 margin-right: 10vw;
-                width: 45%;
+                width: calc(45% + 125px - 7vw );
 
             };
             & a{
@@ -107,6 +111,12 @@ h4{
         min-width: auto !important;
     }
     margin-bottom: 5vw;
+ }
+ .card-body{
+   display: flex;
+   flex-direction: column;
+   
+   justify-content: space-between;
  }
  #descript{
     & span{
@@ -148,3 +158,30 @@ h4{
     height: 75px;
     background-color:  #343a40;
 }
+
+@keyframes ejemplo {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  #prue{
+    background-color: rebeccapurple;
+    width: 360px;
+    height: 100px;
+    position: relative;
+   & p {
+    
+    visibility: collapse;
+   }
+  }
+      
+  #prue:hover{
+  height: auto;
+  & p{
+    visibility: visible;
+    animation-name: ejemplo;
+    animation-duration: 2s;
+    position: absolute;
+   height: 100%;
+    width: 100%;
+  }}

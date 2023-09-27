@@ -4,6 +4,7 @@
         --CardFontSizeB: calc(5px + 1.5vw);
         --CardFontSizeH4: calc(5px + 2vw);
         --CardWidth: calc(100vw * 30/132);
+        --CardFontSizeH1: calc(14px + 2vw);
     }
     *{
        /*  background-color: transparent !important; */
@@ -25,6 +26,9 @@ p{
     
    
 }
+h1{
+    font-size: var(--CardFontSizeH1) !important;
+}
 button{
     font-size: var(--CardFontSizeB) !important;
  
@@ -34,7 +38,7 @@ h4{
 
 }
     body {
-      /*  background-image: url("../tp.jpeg") !important;*/
+       /*  background-image: url("../tp.jpeg") !important; */
         background-size:100%;
             margin: 0;
         }
@@ -60,7 +64,12 @@ color: bisque;
                 align-items: center;
                
             };
+                & :first-child{
+                    color: #fff;
+                }
               & a{
+                text-decoration: none;
+                color: rgba(255,255,255,.55);
                 padding-left: 1vw;
                } 
 
@@ -81,11 +90,13 @@ color: bisque;
             {
                 border-radius: 2vw;
                padding: 1vw;
-                backdrop-filter: blur(1px) grayscale(60%);
+               background-color: rgba(0, 0, 0, 0.25);
+                backdrop-filter: blur(1px) ;
                 margin-right: calc(10px + 2vw);
                 width: calc(45% + 300px - 15vw );
 
             };
+        
             & a{
                 color: bisque !important; 
             }
@@ -145,6 +156,9 @@ color: bisque;
   
  
     padding: 1vw;
+    & p{
+      height: 60%;
+    }
    };
 
         background-color:  #343a40;
@@ -178,8 +192,16 @@ color: bisque;
    
  }
  footer{
-    height: 75px;
+    display: inline-flex;
+    width: 100vw;
+    justify-content: space-around;
+    height: 45px;
     background-color:  #343a40;
+
+    & a{ 
+        text-decoration: none;
+        color: rgba(255,255,255,.55);
+}
 }
 
 @keyframes ejemplo {

@@ -26,6 +26,32 @@
     },
     "logoNav":{"codoacodo.png":"https://dainnin.github.io/HTMLPubM/imgIntegrador/codoacodo.png"
     },
-"descript":{"honolulu.jpg":"https://dainnin.github.io/HTMLPubM/imgIntegrador/honolulu.jpg"
+"descript":
+{
+    "honolulu":"https://dainnin.github.io/HTMLPubM/imgIntegrador/honolulu.jpg"
+},
+"header":{
+   "aLink":{
+   
+    "0":["La conferencia","#"],
+   
+   "1":["Los oradores","#"],
+  "2":[ "El lugar y fecha","#"],
+   "3":["Conviértete en orador","#"],
+   "4":["Comprar tickets","#"]
+   }
+},
+"footer":{
+    
+
+   "0":["Preguntas Frecuentes"],
+    "1":["Contáctanos"],
+    "2":["Prensa"],
+    "3":["Conferencias"],
+    "4":["Términos y Condiciones"],
+    "5":["Privacidad"],
+    "6":["Estudiantes"]
+
+
 }
 }

@@ -1,0 +1,32 @@
+
+header {
+    display: flex;
+    justify-content:space-around ;
+    background-color: rgb(72, 76, 77);
+    height: calc(55px + 2vw);
+    
+    & picture {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+color: bisque;
+       & img {
+
+            height: calc(50px * 12 / 13 + 1vw );
+        }
+    }
+    & menu {
+        display: flex;
+        align-items: center;
+       
+    };
+        & :first-child{
+            color: #fff;
+        }
+      & a{
+        text-decoration: none;
+        color: rgba(255,255,255,.55);
+        padding-left: 1vw;
+       } 
+
+}

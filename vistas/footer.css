@@ -1,13 +1,18 @@
 
-footer{
+.footer{
     display: inline-flex;
     width: 100vw;
     justify-content: space-around;
+    align-items: center;
     height: 45px;
     background-color:  #343a40;
 
-    & a{ 
-        text-decoration: none;
-        color: rgba(255,255,255,.55);
+     
 }
+.footer a{ 
+    text-decoration: none;
+    color: rgba(255,255,255,.55);
+}
+@media only screen and (max-width:1000px){
+  
 }

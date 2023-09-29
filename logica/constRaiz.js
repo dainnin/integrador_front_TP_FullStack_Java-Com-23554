@@ -1,34 +1,26 @@
 
 
-cElement('link', {
+ cElement('link', {
     rel: "stylesheet",
     href: "./vistas/contenidoIndex.css"
 },
     " ",
-    'afterbegin', 1
+    'beforeend', 1
 )
-llamarObjeto().then((obJSON) => {
+
+
+llamarObjeto(url).then((obJSON) => {
 
     //Header Creacion
 
     const navC = cElement('nav',
-        {
+        {   id:'navC',
             style: `background-Image: url(${obJSON.banner["ba1.jpg"]});
     background-Size: 100%; 
     background-Repeat: no-repeat;`
         },
         `
-    <header>
-    <picture>
-    <a href=""><img src="${Object.values(obJSON.logoNav)}" alt="asdas">
-    </a>
-    <h4>Conf Bs As</h4>
-    </picture>
-    <menu>
-    ${menHeader}
-    </menu>
-    </header>
-    
+             
 <div id='banner'>
 <div>
 <h1>Conf Bs As</h1>
@@ -43,7 +35,9 @@ llamarObjeto().then((obJSON) => {
     `,
         'afterbegin', 0
     );
-
+    
+    document.querySelector('#navC').insertAdjacentElement('beforebegin',HeaderC)
+    document.getElementsByTagName('header')[0].setAttribute('class','header')    
     //Fin Header Creacio
 
     //Creacion de Card Oradores
@@ -72,9 +66,9 @@ llamarObjeto().then((obJSON) => {
     //Fin de Card Oradores
 
     //Estructura de Datos extra
-    cElement('div', { id: 'descript' },
+    cElement('div', { id: 'descript', className:"descript", },
         `  
-    <span><img src="${obJSON.descript.honolulu}" alt=""></span>
+    <span ><img src="${obJSON.descript.honolulu}" alt=""></span>
     <article>
             <h1>Bs As - Octubre</h1>
     <p>Buenos Aires es la provincia y localidad más grande del estado
@@ -94,7 +88,8 @@ llamarObjeto().then((obJSON) => {
     cElement('form',
         {
             action: 'Contacto',
-            method: 'post'
+            method: 'post',
+            className:'form',
         },
         `
       <div>
@@ -112,11 +107,7 @@ llamarObjeto().then((obJSON) => {
       `,
         'beforeend', 0)
 
-    cElement('footer',
-        "",
-        footerALink,
-        'beforeend', 0
-    )
+  
     //Fin
 
     const banners = document.getElementById('banner').getElementsByTagName('a')[0]
@@ -130,3 +121,4 @@ llamarObjeto().then((obJSON) => {
 }//Fin obJSON
 
 )//Fin funcion
+

@@ -11,21 +11,22 @@ nav{
     color: bisque ;
     height: calc(85vw / 16 * 9 - (55px + 2vw));
 
-    & div
-    {
-        border-radius: 2vw;
-       padding: 1vw;
-       background-color: rgba(0, 0, 0, 0.25);
-        backdrop-filter: blur(1px) ;
-        margin-right: calc(10px + 2vw);
-        width: calc(45% + 300px - 15vw );
 
-    };
+}
 
-    & a{
-        color: bisque !important; 
-    }
+#banner div
+{
+    border-radius: 2vw;
+   padding: 1vw;
+   background-color: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(1px) ;
+    margin-right: calc(10px + 2vw);
+    width: calc(45% + 300px - 15vw );
 
+}
+
+#banner a{
+    color: bisque !important; 
 }
 section{
 
@@ -34,57 +35,116 @@ text-align: center;
 #oradores{
     width: 76vw;
     justify-content: space-evenly;
-    /* margin-left: 12vw  !important; */
+ 
     display: inline-flex;
     
 }
 
-#descript{
+.descript{
     color: antiquewhite !important;
      display: inline-flex;
 
-    & span{
-        
-        width: 50vw;
-        & img{width: 50vw;}
-    };
-   & :nth-child(2){
-  height: calc(50vw * 9/16);
   
- 
-    padding: 1vw;
-    & p{
-      height: 60%;
-    }
-   };
 
         background-color:  #343a40;
     
  }
- form{
+.descript span{
+        
+    width: 50vw;
+    
+}
+.descript span img{
+    width: 50vw;
+}
+.descript :nth-child(2){
+    height: calc(50vw * 9/16);padding:1vw;
+}
+
+.descript :nth-child(2) p{
+    height: 60%;
+  }
+
+ .form{
     margin: calc(5px + 2vw);
  display: flex;
  flex-direction: column;
     text-align: center;
     align-items: center;
-    & textarea{
+ 
+ }
+
+ .form textarea{
        
-       width: 55vw;
-       height: calc(55vw * 3 / 11);
+    width: 70vw;
+    height: calc(70vw * 3 / 11);
+ }
+
+ .form  * + div{ 
+        
+         display: flex;
+         justify-content: space-between;
+         width: 70vw;
+     }
+
+.form  *  input{
+
+        margin: calc(5px + 2vw) 0 calc(5px + 2vw) 0;
+        width: 45%;
+        
+        
     }
-  
-        &  * + div{ 
-           
-            display: flex;
-            justify-content: space-between;
-            width: 55vw;
+   *::placeholder{
+    color: rgba(255, 0, 0, 0.70);
+   }
+
+   @media only screen and (max-width:870px){
+   
+    #oradores{
+        
+      flex-direction: column;
+      align-items: center;
+        
+    }
+    .card{
+        width: calc(var(--CardWidth) * 2);
+    }
+    .card img{
+        width: calc(var(--CardWidth) * 2);
+    }
+    nav{
+        display: flex;
+        
+        justify-content: center;
+        align-items: center;
+    }
+    nav div{
+        width: 90vw;
+        margin: 0 !important;
+    }
+    .descript{
+       flex-direction: column;
+       
         }
-        &  *  input{
-            margin: calc(5px + 2vw) 0 calc(5px + 2vw) 0;
-            width: 45%;
-            color: red ;
+        .descript span{
+        
+            width: 50vw;
             
         }
-
-   
- }
+        .descript span{
+        
+            width: 100vw;
+            
+        }
+        .descript span img{
+            width: 100vw;
+        }
+        .descript :nth-child(2){
+            height: calc(100vw * 9/16);padding:1vw;
+        }
+        
+        .descript :nth-child(2) p{
+            height: 60%;
+          }
+        
+   }

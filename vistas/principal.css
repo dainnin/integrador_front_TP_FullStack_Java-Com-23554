@@ -1,23 +1,25 @@
     :root{
         --CardFontSizeP: calc(5px + 1vw);
-        --CardFontSizeA: calc(3px  + 1.25vw);
+        --CardFontSizeA: calc(5px  + 1.25vw);
         --CardFontSizeB: calc(5px + 1.5vw);
         --CardFontSizeH4: calc(5px + 2vw);
         --CardWidth: calc(100vw * 30/132);
         --CardFontSizeH1: calc(14px + 2vw);
     }
     *{
-       /*  background-color: transparent !important; */
+      
         min-width: auto !important;
+      
       
     }
     ::-webkit-scrollbar{
         width: 0px;
     }
-a{
+a,input,textarea, button{
     font-size: var(--CardFontSizeA) !important;
 
 }
+
 p{
     margin: 6px 0 6px 0;
     font-size: var(--CardFontSizeP) !important;
@@ -38,7 +40,7 @@ h4{
 
 }
     body {
-       /*  background-image: url("../tp.jpeg") !important; */
+        
         background-size:100%;
             margin: 0;
         }
@@ -47,32 +49,33 @@ h4{
  .card{
     width: var(--CardWidth);
     align-items: center;
-   
+    margin-bottom: 5vw;
     border-width: 2px !important;
    
-    & div{
+     }
+     .card div{
        
         overflow: hidden;
         padding: 5px;
     }
-    & img{
+    .card img{
         height: auto;
         width: var(--CardWidth);
         min-width: auto !important;
     }
-    margin-bottom: 5vw;
-    & a{
+   
+    .card a{
         margin: 1vw;
     }
- }
  .card-body{
    display: flex;
    flex-direction: column;
- & p{
+   
+ }
+ .card-body p{
     height: calc(var(--CardWidth) * 8/11);
  }
    
- }
 
 
 @keyframes ejemplo {

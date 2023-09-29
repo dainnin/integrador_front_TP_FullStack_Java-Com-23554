@@ -30,7 +30,7 @@ color: bisque;
    
 };
 
-.header h4{
+.header :first-child{
         color: #fff;
     }
     .header a{

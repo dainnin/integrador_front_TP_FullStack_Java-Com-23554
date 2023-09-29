@@ -28,7 +28,7 @@ color: bisque;
     display: flex;
     align-items: center;
    
-};
+}
 
 .header :first-child{
         color: #fff;

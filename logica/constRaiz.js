@@ -1,3 +1,41 @@
+let macForm = {
+    "oradores": {
+        "steve.jpg": ["https://dainnin.github.io/HTMLPubM/imgIntegrador/steve.jpg",
+            "Steve Jobs",
+            "Steve Jobs es ampliamente reconocido como uno de los oradores públicos más efectivos de su tiempo. Era famoso por su atención rigurosa a cada detalle en sus presentaciones, desde el estilo de las fuentes en sus diapositivas hasta el color del fondo del escenario. Su habilidad para contar historias apasionantes y hacer demostraciones memorables le permitió presentar ideas complejas de manera clara y sencilla",
+            "https://www.biografiasyvidas.com/biografia/j/jobs.htm"
+        ],
+
+        "bill.jpg": ["https://dainnin.github.io/HTMLPubM/imgIntegrador/bill.jpg",
+            "Bill Gates",
+            `Bill Gates es conocido por su capacidad para hablar sobre desafíos
+    globales de manera comprensible y memorable1. Ha participado en numerosas
+     charlas y entrevistas, abordando temas como la salud global, la evasión 
+     fiscal corporativa, la guerra de robots, la filantropía y las redes sociales.
+      Su estilo de presentación es detallado y bien preparado, lo que refleja su 
+      enfoque metódico y su pasión por los temas que discute.`,
+            "https://www.biografiasyvidas.com/biografia/g/gates.htm"
+        ],
+        "ada.jpeg": ["https://dainnin.github.io/HTMLPubM/imgIntegrador/ada.jpeg",
+            "Ada Lovelace",
+            "Aunque no hay registros específicos de Ada Lovelace como oradora pública, se sabe que era una comunicadora efectiva. Su trabajo en la máquina analítica de Charles Babbage demostró su habilidad para entender y explicar conceptos complejos. Además, sus habilidades lingüísticas y creativas fueron fundamentales en su invención de la programación informática",
+            "https://psicologiaymente.com/biografias/ada-lovelace"
+        ]
+
+
+    },
+    "banner": {
+        "ba1.jpg": "https://dainnin.github.io/HTMLPubM/imgIntegrador/ba1.jpg",
+        "ba2.jpg": "https://dainnin.github.io/HTMLPubM/imgIntegrador/ba2.jpg",
+        "ba3.jpg": "https://dainnin.github.io/HTMLPubM/imgIntegrador/ba3.jpg"
+    },
+   
+    "descript":
+    {
+        "honolulu": "https://dainnin.github.io/HTMLPubM/imgIntegrador/honolulu.jpg"
+    },
+  
+}
 
 
  cElement('link', {
@@ -9,13 +47,11 @@
 )
 
 
-llamarObjeto(url).then((obJSON) => {
-
     //Header Creacion
 
     const navC = cElement('nav',
         {   id:'navC',
-            style: `background-Image: url(${obJSON.banner["ba1.jpg"]});
+            style: `background-Image: url(${macForm.banner["ba1.jpg"]});
     background-Size: 100%; 
     background-Repeat: no-repeat;`
         },
@@ -42,7 +78,7 @@ llamarObjeto(url).then((obJSON) => {
 
     //Creacion de Card Oradores
 
-    let oradores = Object.values(obJSON.oradores).map(Esquema =>
+    let oradores = Object.values(macForm.oradores).map(Esquema =>
         `<article class='card'> 
         <picture><img class='card-img-top' src="${Esquema[0]}" alt=""></picture>
         <div class='card-body'>
@@ -68,7 +104,7 @@ llamarObjeto(url).then((obJSON) => {
     //Estructura de Datos extra
     cElement('div', { id: 'descript', className:"descript", },
         `  
-    <span ><img src="${obJSON.descript.honolulu}" alt=""></span>
+    <span ><img src="${macForm.descript.honolulu}" alt=""></span>
     <article>
             <h1>Bs As - Octubre</h1>
     <p>Buenos Aires es la provincia y localidad más grande del estado
@@ -118,7 +154,5 @@ llamarObjeto(url).then((obJSON) => {
     banners.addEventListener('mouseout', () =>
         banners.style = 'color: bisque !important;'
     )
-}//Fin obJSON
 
-)//Fin funcion
 

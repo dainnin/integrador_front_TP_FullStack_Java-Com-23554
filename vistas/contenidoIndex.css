@@ -1,153 +1,169 @@
-
-nav{
+nav {
     height: calc(85vw / 16 * 9);
 }
-#banner{
-     
+
+#banner {
+
     display: flex !important;
-   justify-content:right;
-   align-items: center;
-    text-align:end ;
-    color: bisque ;
+    justify-content: right;
+    align-items: center;
+    text-align: end;
+    color: bisque;
     height: calc(85vw / 16 * 9 - (55px + 2vw));
 
 
 }
 
-#banner div
-{
+#banner div {
     border-radius: 2vw;
-   padding: 1vw;
-   background-color: rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(1px) ;
+    padding: 1vw;
+    background-color: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(1px);
     margin-right: calc(10px + 2vw);
-    width: calc(45% + 300px - 15vw );
+    width: calc(45% + 300px - 15vw);
 
 }
 
-#banner a{
-    color: bisque !important; 
+#banner a {
+    color: bisque !important;
 }
-section{
 
-text-align: center;
+section {
+
+    text-align: center;
 }
-#oradores{
+
+#oradores {
     width: 76vw;
     justify-content: space-evenly;
- 
+
     display: inline-flex;
-    
+
 }
 
-.descript{
+.descript {
     color: antiquewhite !important;
-     display: inline-flex;
+    display: inline-flex;
 
-  
 
-        background-color:  #343a40;
-    
- }
-.descript span{
-        
+
+    background-color: #343a40;
+
+}
+
+.descript span {
+
     width: 50vw;
-    
-}
-.descript span img{
-    width: 50vw;
-}
-.descript :nth-child(2){
-    height: calc(50vw * 9/16);padding:1vw;
+
 }
 
-.descript :nth-child(2) p{
+.descript span img {
+    width: 50vw;
+}
+
+.descript :nth-child(2) {
+    height: calc(50vw * 9/16);
+    padding: 1vw;
+}
+
+.descript :nth-child(2) p {
     height: 60%;
-  }
+}
 
- .form{
+.form {
     margin: calc(5px + 2vw);
- display: flex;
- flex-direction: column;
+    display: flex;
+    flex-direction: column;
     text-align: center;
     align-items: center;
- 
- }
 
- .form textarea{
-       
+}
+
+.form textarea {
+
     width: 70vw;
     height: calc(70vw * 3 / 11);
- }
+}
 
- .form  * + div{ 
-        
-         display: flex;
-         justify-content: space-between;
-         width: 70vw;
-     }
+.form *+div {
 
-.form  *  input{
+    display: flex;
+    justify-content: space-between;
+    width: 70vw;
+}
 
-        margin: calc(5px + 2vw) 0 calc(5px + 2vw) 0;
-        width: 45%;
-        
-        
-    }
-   *::placeholder{
+.form * input {
+
+    margin: calc(5px + 2vw) 0 calc(5px + 2vw) 0;
+    width: 45%;
+
+
+}
+
+*::placeholder {
     color: rgba(255, 0, 0, 0.70);
-   }
+}
 
-   @media only screen and (max-width:870px){
-      #banner p{
+@media only screen and (max-width:870px) {
+     #banner p{
        
         height: calc( 100vw / 16 * 3);
      }
-    #oradores{
-        
-      flex-direction: column;
-      align-items: center;
-        
+    #oradores {
+
+        flex-direction: column;
+        align-items: center;
+
     }
-    .card{
+
+    .card {
         width: calc(var(--CardWidth) * 2);
     }
-    .card img{
+
+    .card img {
         width: calc(var(--CardWidth) * 2);
     }
-    nav{
+
+    nav {
         display: flex;
-        
+
         justify-content: center;
         align-items: center;
     }
-    nav div{
+
+    nav div {
         width: 90vw;
         margin: 0 !important;
     }
-    .descript{
-       flex-direction: column;
-       
-        }
-        .descript span{
-        
-            width: 50vw;
-            
-        }
-        .descript span{
-        
-            width: 100vw;
-            
-        }
-        .descript span img{
-            width: 100vw;
-        }
-        .descript :nth-child(2){
-            height: calc(100vw * 9/16);padding:1vw;
-        }
-        
-        .descript :nth-child(2) p{
-            height: 60%;
-          }
-        
-   }
+
+    .descript {
+        flex-direction: column;
+
+    }
+
+    .descript span {
+
+        width: 50vw;
+
+    }
+
+    .descript span {
+
+        width: 100vw;
+
+    }
+
+    .descript span img {
+        width: 100vw;
+    }
+
+    .descript :nth-child(2) {
+        height: calc(100vw * 9/16);
+        padding: 1vw;
+    }
+
+    .descript :nth-child(2) p {
+        height: 60%;
+    }
+
+}

@@ -1,41 +1,39 @@
-
-
-
-
-
-
 .header {
     display: flex;
-    justify-content:space-around ;
+    justify-content: space-around;
     background-color: rgb(72, 76, 77);
     height: calc(55px + 2vw);
-    
-   
+
+
 
 }
+
 .header picture {
     display: flex;
     justify-content: center;
     align-items: center;
-color: bisque;
+    color: bisque;
 
 }
+
 .header picture img {
 
-    height: calc(50px * 12 / 13 + 1vw );
+    height: calc(50px * 12 / 13 + 1vw);
 }
+
 .header menu {
     display: flex;
     align-items: center;
-   
+
 }
 
-.header :first-child{
-        color: #fff;
-    }
-    .header a{
+.header :first-child {
+    color: #fff !important;
+}
+
+
+.header a {
     text-decoration: none;
-    color: rgba(255,255,255,.55);
+    color: rgba(255, 255, 255, .55);
     padding-left: 1vw;
-   } 
-   
+}

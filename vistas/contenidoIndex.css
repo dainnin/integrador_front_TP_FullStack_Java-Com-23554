@@ -117,20 +117,28 @@ section {
     }
 
     .card {
-        width: calc(var(--CardWidth) * 2);
+        max-width: calc(var(--CardWidth) * 3);
     }
 
-    .card img {
-        width: calc(var(--CardWidth) * 2);
-    }
+     .card img {
+        width: calc(var(--CardWidth) * 3);
+    } 
 
     nav {
-        display: flex;
-
+      height: calc(150vw / 16 * 9);
+      background-image: none !important;
         justify-content: center;
         align-items: center;
     }
-
+    #banner{
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        background-image: url("https://dainnin.github.io/HTMLPubM/imgIntegrador/ba1.jpg");
+        background-size: 100%; 
+        background-repeat: no-repeat;
+        height: calc(125vw / 16 * 9 - (55px + 2vw));
+    }
     nav div {
         width: 90vw;
         margin: 0 !important;

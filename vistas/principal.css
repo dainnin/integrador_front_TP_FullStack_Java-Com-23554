@@ -47,7 +47,7 @@ h4{
 
    
  .card{
-    width: var(--CardWidth);
+    max-width: var(--CardWidth);
     align-items: center;
     margin-bottom: 5vw;
     border-width: 2px !important;
@@ -60,7 +60,7 @@ h4{
     }
     .card img{
         height: auto;
-        width: var(--CardWidth);
+       width: var(--CardWidth);
         min-width: auto !important;
     }
    

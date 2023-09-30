@@ -1,5 +1,6 @@
 .header {
     display: flex;
+    
     justify-content: space-around;
     background-color: rgb(72, 76, 77);
     height: calc(55px + 2vw);
@@ -36,4 +37,65 @@
     text-decoration: none;
     color: rgba(255, 255, 255, .55);
     padding-left: 1vw;
+}
+
+@keyframes ejemplo {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+
+
+ @keyframes abrir {
+    0% { max-height: 100px; }
+    100% { max-height:125px; }
+  }
+  
+
+@media screen and (max-width:870px){
+
+.header{
+    flex-direction: column;
+    height: calc(55px + 8vw);
+}
+.header menu{
+    position: relative;
+    padding: 0;
+    height: calc((55px + 7vw)/5);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: visible;
+    z-index: 100;
+    
+}
+.header menu a{
+    visibility: collapse;
+}
+.header menu::before {
+    color: burlywood;
+    font-weight: bold;
+    font-size:larger;
+ content: "MENU";
+}
+.header menu:hover::before{
+   visibility: hidden;
+}
+  .header menu{
+    animation-name: abrir;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+  }
+  
+  .header menu:hover a{
+    text-align: center;
+    padding:0;
+    width: 100vw;
+    background-color:  rgb(72, 76, 77);
+    visibility: visible;
+      animation-name: ejemplo;
+      animation-duration: 2s;
+ visibility: visible;
+  }
+
 }

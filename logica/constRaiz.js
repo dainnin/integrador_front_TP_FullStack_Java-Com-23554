@@ -56,7 +56,7 @@ let macForm = {
     background-Repeat: no-repeat;`
         },
         `
-             
+        ${HeaderC.outerHTML}     
 <div id='banner'>
 <div>
 <h1>Conf Bs As</h1>
@@ -72,8 +72,8 @@ let macForm = {
         'afterbegin', 0
     );
     
-    document.querySelector('#navC').insertAdjacentElement('beforebegin',HeaderC)
-    document.getElementsByTagName('header')[0].setAttribute('class','header')    
+ 
+      
     //Fin Header Creacio
 
     //Creacion de Card Oradores
@@ -90,7 +90,7 @@ let macForm = {
          `
     ).join(' ');
 
-    cElement('section', "", ` 
+    cElement('section', {}, ` 
       <p>CONOCE A LOS</p>
       <h4>ORADORES</h4>
       <div id="oradores">
@@ -126,6 +126,7 @@ let macForm = {
             action: 'Contacto',
             method: 'post',
             className:'form',
+            id:'oradoresC',
         },
         `
       <div>
@@ -146,7 +147,7 @@ let macForm = {
   
     //Fin
 
-    const banners = document.getElementById('banner').getElementsByTagName('a')[0]
+    const banners = document.getElementsByClassName('btn-outline-light')[0]
 
     banners.addEventListener('mouseover', () =>
         banners.style = 'color: black !important;'

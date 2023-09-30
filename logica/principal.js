@@ -4,9 +4,9 @@ const macFormPrin={
 
             "0": ["La conferencia", "#"],
 
-            "1": ["Los oradores", "#"],
+            "1": ["Los oradores", "#oradores"],
             "2": ["El lugar y fecha", "#"],
-            "3": ["Conviértete en orador", "#"],
+            "3": ["Conviértete en orador", "#oradoresC"],
             "4": ["Comprar tickets", "#"]
         }
         
@@ -99,7 +99,7 @@ async function llamarObjeto(x) {
  menHeader = Object.values(macFormPrin.header.aLink).map(
     aLink => `<a href="${aLink[1]}">${aLink[0]}</a>`
 ).join('')
-HeaderC = cElement('header',{className:'header',},`
+HeaderC = cElement('header',{className:'header',className:'header',},`
 <picture>
 <a href=""><img src="${Object.values(macFormPrin.logoNav)}" alt="asdas">
 </a>

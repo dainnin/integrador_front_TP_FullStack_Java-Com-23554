@@ -116,7 +116,9 @@ let footerALink = Object.values(macFormPrin.footer).map(
     link => `<a href="">${link[0]}</a>`).join('');
   cElement('footer',
     {className:'footer'},
-    footerALink,
+    `
+    ${footerALink}
+  `,
     'afterend', 0
 )
 

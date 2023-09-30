@@ -1,8 +1,8 @@
     :root{
-        --CardFontSizeP: calc(7px + 1vw);
+        --CardFontSizeP: calc(9px + 1vw);
         --CardFontSizeA: calc(7px  + 1.25vw);
-        --CardFontSizeB: calc(7px + 1.5vw);
-        --CardFontSizeH4: calc(7px + 2vw);
+        --CardFontSizeB: calc(9px + 1.5vw);
+        --CardFontSizeH4: calc(9px + 2vw);
         --CardWidth: calc(100vw * 30/132);
         --CardFontSizeH1: calc(14px + 2vw);
     }

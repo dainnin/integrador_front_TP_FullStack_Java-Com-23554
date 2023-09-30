@@ -32,19 +32,29 @@
     color: #fff !important;
 }
 
-
+.header :first-child:focus{
+    color: aqua !important;
+}
 .header a {
     text-decoration: none;
     color: rgba(255, 255, 255, .55);
     padding-left: 1vw;
 }
 
-@keyframes ejemplo {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+@keyframes aparecer {
+    0% { opacity: 0;
+        }
+    100% { opacity: 1;
+         }
   }
 
-
+  @keyframes desaparecer {
+    100% { max-height: max-content;
+        opacity: 0; }
+    0% { opacity: 1; 
+        max-height: 0px;}
+    
+  }
 
  @keyframes abrir {
     0% { max-height: 100px; }
@@ -70,7 +80,14 @@
     
 }
 .header menu a{
-    visibility: collapse;
+    font-size: var(--CardFontSizeH1) !important;
+    text-align: center;
+    padding:0;
+    width: 100vw;
+    background-color:  rgb(72, 76, 77);
+   height: max-content;
+      visibility: collapse;
+    
 }
 .header menu::before {
     color: burlywood;
@@ -79,22 +96,19 @@
  content: "MENU";
 }
 .header menu:hover::before{
-   visibility: hidden;
+  
+   animation-name: desaparecer;
+   animation-duration: 2s;
 }
   .header menu{
     animation-name: abrir;
     animation-duration: 2s;
     animation-fill-mode: forwards;
   }
-  
+
   .header menu:hover a{
-    text-align: center;
-    padding:0;
-    width: 100vw;
-    background-color:  rgb(72, 76, 77);
-    visibility: visible;
-      animation-name: ejemplo;
-      animation-duration: 2s;
+    animation-name: aparecer;
+   animation-duration: 2s;
  visibility: visible;
   }
 

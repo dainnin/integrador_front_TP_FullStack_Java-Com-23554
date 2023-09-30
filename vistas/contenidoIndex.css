@@ -173,5 +173,7 @@ section {
     .descript :nth-child(2) p {
         height: 60%;
     }
-
+    .card-body p{
+        height: calc(var(--CardWidth) * 14/11);
+     }
 }

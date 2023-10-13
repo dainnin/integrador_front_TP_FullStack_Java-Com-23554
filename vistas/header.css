@@ -1,8 +1,8 @@
 .header {
     display: flex;
-    
+    color: var(--TextoFondosObsc);
     justify-content: space-around;
-    background-color: rgb(72, 76, 77);
+    background-color: var(--FondoHeader);
     height: calc(55px + 2vw);
 
 
@@ -13,31 +13,34 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: bisque;
-
-}
+   
+ }
 
 .header picture img {
 
     height: calc(50px * 12 / 13 + 1vw);
 }
 
-.header menu {
+.header ul {
     display: flex;
     align-items: center;
 
 }
-
-.header :first-child {
-    color: #fff !important;
+.header li{
+    
+    list-style: none;
 }
+.header ul p {
+  display: none;
+}
+
 
 .header :first-child:focus{
     color: aqua !important;
 }
 .header a {
+    color: var(--TextoFondosObsc);
     text-decoration: none;
-    color: rgba(255, 255, 255, .55);
     padding-left: 1vw;
 }
 
@@ -48,13 +51,7 @@
          }
   }
 
-  @keyframes desaparecer {
-    100% { max-height: max-content;
-        opacity: 0; }
-    0% { opacity: 1; 
-        max-height: 0px;}
-    
-  }
+
 
  @keyframes abrir {
     0% { max-height: 100px; }
@@ -66,47 +63,56 @@
 
 .header{
     flex-direction: column;
-    height: calc(55px + 8vw);
+    height: calc(60px + 8vw);
 }
-.header menu{
-    position: relative;
+.header ul{
+    display: block;
     padding: 0;
-    height: calc((55px + 7vw)/5);
+    height: calc((24px + 7vw)/5);
     justify-content: center;
     align-items: center;
     flex-direction: column;
     overflow: visible;
     z-index: 100;
-    
+ 
 }
-.header menu a{
-    font-size: var(--CardFontSizeH1) !important;
-    text-align: center;
-    padding:0;
-    width: 100vw;
+.header li{  
+   
     background-color:  rgb(72, 76, 77);
+    width: 100vw;
+    visibility: collapse;
+  
+    text-align: center;
+}
+
+
+.header ul * a{
+    font-size: var(--CardFontSizeH1) !important;
+  
+    padding:0;
+
    height: max-content;
-      visibility: collapse;
+   
     
 }
-.header menu::before {
-    color: burlywood;
-    font-weight: bold;
-    font-size:larger;
- content: "MENU";
+
+.header ul p {
+    display: block;
+    margin: 0;
+    background-color:  var(--FondoHeader);
+    visibility: visible !important;
+    font-weight: bold !important;
+    font-size:larger !important;
+    text-align: center;
 }
-.header menu:hover::before{
-  
-   animation-name: desaparecer;
-   animation-duration: 2s;
-}
-  .header menu{
+
+  .header ul{
     animation-name: abrir;
     animation-duration: 2s;
     animation-fill-mode: forwards;
   }
 
-  .header menu:hover a{
+  .header ul:hover li{
     animation-name: aparecer;
    animation-duration: 2s;
  visibility: visible;

@@ -8,16 +8,19 @@ nav {
     justify-content: right;
     align-items: center;
     text-align: end;
-    color: bisque;
+   
     height: calc(85vw / 16 * 9 - (55px + 2vw));
 
 
 }
 
+#banner {
+    color: var(--TextoFondosObsc);
+}
 #banner div {
     border-radius: 2vw;
-    padding: 1vw;
-    background-color: rgba(0, 0, 0, 0.25);
+    padding: 3vw;
+    background-color: rgba(0, 0, 0, 0.31);
     backdrop-filter: blur(1px);
     margin-right: calc(10px + 2vw);
     width: calc(45% + 300px - 15vw);
@@ -79,11 +82,7 @@ section {
 
 }
 
-.form textarea {
 
-    width: 70vw;
-    height: calc(70vw * 3 / 11);
-}
 
 .form *+div {
 
@@ -96,6 +95,17 @@ section {
 
     margin: calc(5px + 2vw) 0 calc(5px + 2vw) 0;
     width: 45%;
+
+
+}
+.form textarea {
+
+    width: 70vw;
+    height: calc(70vw * 3 / 11);
+}
+.form .btn {
+    width: 70vw;
+   
 
 
 }
@@ -149,11 +159,6 @@ section {
 
     }
 
-    .descript span {
-
-        width: 50vw;
-
-    }
 
     .descript span {
 
@@ -176,4 +181,21 @@ section {
     .card-body p{
         height: calc(var(--CardWidth) * 14/11);
      }
+     .form *+div {
+
+        display: flex;
+       flex-direction: column;
+        width: 70vw;
+    }
+     .form * input {
+
+        width: 100%;
+    
+    
+    }
+    .form textarea {
+    
+        width: 70vw;
+        height: calc(70vw * 9 / 11);
+    }
 }

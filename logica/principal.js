@@ -2,11 +2,10 @@ const macFormPrin={
     "header": {
         "aLink": {
 
-            "0": ["La conferencia", "#"],
-
-            "1": ["Los oradores", "#oradores"],
-            "2": ["El lugar y fecha", "#"],
-            "3": ["Conviértete en orador", "#oradoresC"],
+            "0": ["La conferencia", "index.html#"],
+            "1": ["Los oradores", "index.html#oradores"],
+            "2": ["El lugar y fecha", "index.html#descript"],
+            "3": ["Conviértete en orador", "index.html#oradoresC"],
             "4": ["Comprar tickets", "#"]
         }
         
@@ -28,6 +27,7 @@ const macFormPrin={
 
     }
 }
+const urlIndex=location.href.substring(location.href.lastIndexOf('/') + 1)
 let menHeader;
 let HeaderC;
 const cElement = (tag, attributes, content, innerEl, nodeX,Selquery) => {
@@ -47,7 +47,7 @@ const cElement = (tag, attributes, content, innerEl, nodeX,Selquery) => {
     
 
 
-if (location.href.substring(location.href.length - 10, location.href.length) == 'index.html') {
+if (location.href.substring(location.href.lastIndexOf('/') + 1) == 'index.html' || 'index.html#' ) {
 
  
     cElement('script',
@@ -97,7 +97,7 @@ async function llamarObjeto(x) {
 
 
  menHeader = Object.values(macFormPrin.header.aLink).map(
-    aLink => `<a href="${aLink[1]}">${aLink[0]}</a>`
+    aLink => `<li><a href="${aLink[1]}">${aLink[0]}</a></li>`
 ).join('')
 HeaderC = cElement('header',{className:'header',className:'header',},`
 <picture>
@@ -105,9 +105,11 @@ HeaderC = cElement('header',{className:'header',className:'header',},`
 </a>
 <h4>Conf Bs As</h4>
 </picture>
-<menu>
+
+<ul>
+<p style='color: burlywood !important;'>MENU</p>
 ${menHeader}
-</menu>
+</ul>
 `
 )
 

@@ -1,21 +1,40 @@
     :root{
-        --CardFontSizeP: calc(9px + 1vw);
-        --CardFontSizeA: calc(7px  + 1.25vw);
-        --CardFontSizeB: calc(9px + 1.5vw);
-        --CardFontSizeH4: calc(9px + 2vw);
+        --CardFontSizeP: calc(12px + 1vw);
+        --CardFontSizeA: calc(5px  + 1.25vw);
+        --CardFontSizeB: calc(12px + 1.5vw);
+        --CardFontSizeH4: calc(12px + 2vw);
+        --CardFontSizeH1: calc(17px + 2vw);
         --CardWidth: calc(100vw * 30/132);
-        --CardFontSizeH1: calc(14px + 2vw);
+        --EstadoHabilitado: rgb(32, 216, 32) !important;
+        --EstadoMedio: rgb(255, 208, 0) !important;
+        --EstadoCritico: rgb(255, 0, 0) !important;
+        --FondoHeader:rgb(72, 76, 77);
+        
+        --TextoFondosObsc: rgb(255, 230, 230); 
     }
     *{
       
         min-width: auto !important;
-      
+    
       
     }
+    input,textarea{ font-size: var(--CardFontSizeP);}
+
     ::-webkit-scrollbar{
         width: 0px;
     }
-a,input,textarea, button{
+ .btn-compra-tickets { 
+    color: #25a342; 
+}
+
+.btn-form {
+    background: #96c93e;
+    color: #fff !important;
+  }
+  .btn-form:hover {
+     background: #74aa17; 
+}
+a, button{
     font-size: var(--CardFontSizeA) !important;
 
 }
@@ -116,4 +135,10 @@ h4{
     
       overflow-y: scroll;
   }
- 
+  @media only screen and (max-width:500px) {
+ :root{ --CardFontSizeP: calc(9px + 3vw);
+  --CardFontSizeA: calc(5px  + 3.5vw);
+  --CardFontSizeB: calc(9px + 3.5vw);
+  --CardFontSizeH4: calc(9px + 4vw);
+  --CardFontSizeH1: calc(14px + 4vw);
+}}

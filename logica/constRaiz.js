@@ -9,7 +9,7 @@ let macForm = {
         "bill.jpg": ["https://dainnin.github.io/HTMLPubM/imgIntegrador/bill.jpg",
             "Bill Gates",
             `Bill Gates es conocido por su capacidad para hablar sobre desafíos
-    globales de manera comprensible y memorable1. Ha participado en numerosas
+    globales de manera comprensible y memorable. Ha participado en numerosas
      charlas y entrevistas, abordando temas como la salud global, la evasión 
      fiscal corporativa, la guerra de robots, la filantropía y las redes sociales.
       Su estilo de presentación es detallado y bien preparado, lo que refleja su 
@@ -21,41 +21,36 @@ let macForm = {
             "Aunque no hay registros específicos de Ada Lovelace como oradora pública, se sabe que era una comunicadora efectiva. Su trabajo en la máquina analítica de Charles Babbage demostró su habilidad para entender y explicar conceptos complejos. Además, sus habilidades lingüísticas y creativas fueron fundamentales en su invención de la programación informática",
             "https://psicologiaymente.com/biografias/ada-lovelace"
         ]
-
-
     },
     "banner": {
         "ba1.jpg": "https://dainnin.github.io/HTMLPubM/imgIntegrador/ba1.jpg",
         "ba2.jpg": "https://dainnin.github.io/HTMLPubM/imgIntegrador/ba2.jpg",
         "ba3.jpg": "https://dainnin.github.io/HTMLPubM/imgIntegrador/ba3.jpg"
     },
-   
+
     "descript":
     {
         "honolulu": "https://dainnin.github.io/HTMLPubM/imgIntegrador/honolulu.jpg"
     },
-  
+
 }
-
-
- cElement('link', {
+cElement('link', {
     rel: "stylesheet",
     href: "./vistas/contenidoIndex.css"
 },
     " ",
     'beforeend', 1
 )
+//Header Creacion
 
-
-    //Header Creacion
-
-    const navC = cElement('nav',
-        {   id:'navC',
-            style: `background-Image: url(${macForm.banner["ba1.jpg"]});
+const navC = cElement('nav',
+    {
+        id: 'navC',
+        style: `background-Image: url(${macForm.banner["ba1.jpg"]});
     background-Size: 100%; 
     background-Repeat: no-repeat;`
-        },
-        `
+    },
+    `
         ${HeaderC.outerHTML}     
 <div id='banner'>
 <div>
@@ -69,17 +64,17 @@ let macForm = {
 </div>
 </div>
     `,
-        'afterbegin', 0
-    );
-    
- 
-      
-    //Fin Header Creacio
+    'afterbegin', 0
+);
 
-    //Creacion de Card Oradores
 
-    let oradores = Object.values(macForm.oradores).map(Esquema =>
-        `<article class='card'> 
+
+//Fin Header Creacio
+
+//Creacion de Card Oradores
+
+let oradores = Object.values(macForm.oradores).map(Esquema =>
+    `<article class='card'> 
         <picture><img class='card-img-top' src="${Esquema[0]}" alt=""></picture>
         <div class='card-body'>
          <h4 class='card-title'>${Esquema[1]}</h4>
@@ -88,22 +83,22 @@ let macForm = {
          <a class='btn btn-primary' href="${Esquema[3]}">Mas Info</a>
          </article>
          `
-    ).join(' ');
+).join(' ');
 
-    cElement('section', {}, ` 
+cElement('section', {}, ` 
       <p>CONOCE A LOS</p>
       <h4>ORADORES</h4>
       <div id="oradores">
       ${oradores}
       </div>
       `,
-        'beforeend', 0)
+    'beforeend', 0)
 
-    //Fin de Card Oradores
+//Fin de Card Oradores
 
-    //Estructura de Datos extra
-    cElement('div', { id: 'descript', className:"descript", },
-        `  
+//Estructura de Datos extra
+cElement('div', { id: 'descript', className: "descript", },
+    `  
     <span ><img src="${macForm.descript.honolulu}" alt=""></span>
     <article>
             <h1>Bs As - Octubre</h1>
@@ -119,16 +114,16 @@ let macForm = {
     <a href="">Conocè màs</a>
     </article>
     `,
-        'beforeend', 0)
+    'beforeend', 0)
 
-    cElement('form',
-        {
-            action: 'Contacto',
-            method: 'post',
-            className:'form',
-            id:'oradoresC',
-        },
-        `
+cElement('form',
+    {
+        action: 'Contacto',
+        method: 'post',
+        className: 'form',
+        id: 'oradoresC',
+    },
+    `
       <div>
           <p>CONVIÈRTETE EN UN</p>
       
@@ -140,20 +135,20 @@ let macForm = {
       <div><textarea name="Contacto" id="" placeholder="¿Sobre qué quieres hablar?"></textarea>
       </div>
       <p>Recuerda incluir un título para tu charla</p>
-      <input type="button" value="Enviar">
+      <input class='btn btn-lg btn-form' type="button" value="Enviar">
       `,
-        'beforeend', 0)
+    'beforeend', 0)
 
-  
-    //Fin
 
-    const banners = document.getElementsByClassName('btn-outline-light')[0]
+//Fin
 
-    banners.addEventListener('mouseover', () =>
-        banners.style = 'color: black !important;'
-    )
-    banners.addEventListener('mouseout', () =>
-        banners.style = 'color: bisque !important;'
-    )
+const banners = document.getElementsByClassName('btn-outline-light')[0]
+
+banners.addEventListener('mouseover', () =>
+    banners.style = 'color: black !important;'
+)
+banners.addEventListener('mouseout', () =>
+    banners.style = 'color: bisque !important;'
+)
 
 

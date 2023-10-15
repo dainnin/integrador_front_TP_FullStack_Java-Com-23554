@@ -14,7 +14,18 @@
 <body>
 
 </body>
+    <script src="https://dainnin.alwaysdata.net/socket.io/socket.io.js"></script>
+<script>
 
+const socket=io.connect('https://dainnin.alwaysdata.net/');
+ socket.on('msj',(dato)=>{
+   
+      document.getElementsByTagName('ul')[0].getElementsByTagName('a')[4].style.color=`var(${dato})`;
+     if(document.getElementById('banner')!=null){
+   document.getElementById('banner').getElementsByTagName('a')[1].style.color=`var(${dato})`}
+ })
+
+</script>
 <script src="./logica/principal.js" defer>
 
 </script>
